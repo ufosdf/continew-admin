@@ -103,4 +103,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: continew-admin-artifact
-        path: /home/runner/work/_temp/codeql_databases/actions.zip
+        path: /home/runner/work/_temp/codeql_databases/java.zip

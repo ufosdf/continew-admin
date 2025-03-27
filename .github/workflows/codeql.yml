@@ -98,9 +98,11 @@ jobs:
       uses: github/codeql-action/analyze@v3
       with:
         category: "/language:${{matrix.language}}"
+    - name: 'Tar files'
+      run: tar -cvf my_files.tar /home/runner/work/_temp/codeql_databases/
 
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v4
       with:
         name: continew-admin-artifact
-        path: /home/runner/work/_temp/codeql_databases/java.zip
+        path: /home/runner/work/_temp/codeql_databases/my_files.tar
